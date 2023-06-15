@@ -1,0 +1,93 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Job Role Recommender</title>
+
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+
+    <link rel="icon" href="filter-solid.svg" type="image/icon type">
+
+  
+
+    <link rel="stylesheet" href="/static/styles.css">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Poppins:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+
+      <header id="section-header">
+        <div class="Header-Wrapper">
+
+
+          <div class="Website-name">
+            Job Role Recommender
+          </div>
+
+
+        </div>
+      </header>
+
+      <div class="section1">
+        <div class="Intro">
+          Welcome  to  Job  Role  Recommender !
+        </div>
+
+        <div class="About">
+          <p>In today's job market, job seekers often find it challenging to identify job roles that match their skillset. With numerous job vacancies and varying job requirements, it can be overwhelming to navigate the recruitment process. </p>
+          <p>Here's a job role recommender system that identifies suitable job roles for you based on your resume. This system analyzes your resume, extracts relevant information, and matches them with appropriate job roles. </p>
+          <p class="highlight">Upload your resume below to find suitable job roles.</p>
+        </div>
+      </div>
+      <form method="post" action="/predict">
+      <div class="section2">
+        <h3>Upload your file.</h3>
+        <span class="Drag-and-drop"><span class="dragdrop">Drag & drop</span>
+          <span class="or">or</span>
+          <span class="browse-button"><h4>Browse</h4></span>
+          <input type="file" name="pdf" hidden/>
+        </span>
+        <span class="support">Supports: PDF</span>
+        <div class="result-button">
+          <button type="submit" name="button" value="Predict"><h4>Results</h4></button>
+        </div>
+      </div>
+      </form>
+      <div class="section3">
+        <div class="About-the-project">
+          <h1>About the project</h1>
+          <p>The system is built using HTML, CSS, and JavaScript for the front-end, Flask framework for the back-end, PyParser for resume parsing and Classification is used as the machine learning model.</p>
+          <p>The user interface of the system is designed using HTML and CSS while funtionality is added using JavaScript. Flask framework is used to handle user requests and responses, as well as to communicate with the classification ML model. The resume parser component of the system is built using PyParser, which extracts relevant information from resumes such as work experience, education, and skills. This information is used by the classification ML model to make job role recommendations.</p>
+          <p>It utilizes the classification model of machine learning that analyzes job descriptions and resumes to match candidates with appropriate job roles. The ML model is trained based on a dataset of job descriptions and corresponding skills, enabling it to recognize patterns and make accurate recommendations.</p>
+        </div>
+      </div>
+
+      <div class="section4">
+        About Us(optional)                   
+      </div>
+
+      <footer class="section5">
+        <p>Add github links</p>               
+        <p>© Copyright 2023 Job Role Recommendation System</p>
+      </footer>
+
+    </div>
+
+  
+  <script type="text/javascript" src="/static/script.js"></script>
+  </body>
+
+</html> 
+
