@@ -55,18 +55,28 @@ def main():
         """
         <style>
         .stApp {
-            background-color: #002B5B;  /* Set your desired background color */
-            color: #57C5B6;
+            background-color: #080202;  /* Set your desired background color */
+            color: #9AFFDC;
             font-family: sans-serif;
         }
         </style>
         """,
         unsafe_allow_html=True
     )
-    st.markdown("<h1 style='color: #ECE5C7;'>Resume Parser & <br> Role Recommender</h1>", unsafe_allow_html=True)
-    
+    bg_image = '''
+        <style>
+        .stApp {
+            background-image: url("background.jpg");
+            background-size: cover;
+        }
+        </style>
+        '''
+    st.markdown(bg_image, unsafe_allow_html=True)
+    st.markdown("<h1 style='color: #9AFFDC;'>Resume Parser & <br> Role Recommender</h1><br>", unsafe_allow_html=True)
+    st.markdown("<p style='color: white;'>In today's job market, job seekers often find it challenging to identify job roles that match their skillset. With numerous job vacancies and varying job requirements, it can be overwhelming to navigate the recruitment process. </p>", unsafe_allow_html=True)
+    st.markdown("<p style='color: white;'>Here's a job role recommender system that identifies suitable job roles for you based on your resume. This system analyzes your resume, extracts relevant information, and matches them with appropriate job roles. </p><br>", unsafe_allow_html=True)
     # Upload PDF file
-    uploaded_file = st.file_uploader("Upload a PDF file", type="pdf")
+    uploaded_file = st.file_uploader("Upload your resume below to find suitable job roles. (Allowed: pdf)", type="pdf")
 
     if uploaded_file is not None:
         with st.spinner("Processing file..."):
